@@ -29,4 +29,18 @@ if [ "$1" = "--init" ]; then
     echo "Repozytorium zostało sklonowane i dodane do PATH"
 fi
 
+if [ "$1" = "--error" ] || [ "$1" = "-e" ]; then
+    if [ "$2" = "" ]; then
+        for i in {1..100}; do
+		    touch $(pwd)"/error$i/error$i.txt"
+			echo "Nazwa pliku: error$i.txt, nazwa skryptu: skrypt.sh, data: $(date)" > $(pwd)/"error$i/error$i.txt"
+        done
+    else
+        for i in $(seq 1 "$2"); do
+            touch $(pwd)"/error$i/error$i.txt"
+			echo "Nazwa pliku: error$i.txt, nazwa skryptu: skrypt.sh, data: $(date)" > $(pwd)/"error$i/error$i.txt"
+        done
+	fi
+fi
+
 read -p "end"
