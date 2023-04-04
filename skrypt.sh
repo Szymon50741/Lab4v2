@@ -23,7 +23,7 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
 	echo "Tworzenie n-plikow logs -> skrypt.sh --logs n, gdzie n - liczba plikow do stworzenia"
 fi
 
-elif [ "$1" = "--init" ]; then
+if [ "$1" = "--init" ]; then
     git clone https://github.com/Szymon50741/Lab4v2.git
     export PATH=$PATH:$(pwd)/repo
     echo "Repozytorium zostało sklonowane i dodane do PATH"
