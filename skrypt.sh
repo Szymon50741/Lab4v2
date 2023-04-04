@@ -1,9 +1,9 @@
 #!/bin/bash
-if [ "$1" = "--date" ]; then
+if [ "$1" = "--date" ] || [ "$1" = "-d" ]; then
     date
 fi
 
-if [ "$1" = "--logs" ]; then
+if [ "$1" = "--logs" ] || [ "$1" = "-l" ]; then
     if [ -n "$2" ]; then
         count="$2"
     else
@@ -17,7 +17,7 @@ if [ "$1" = "--logs" ]; then
     done
 fi
 
-if [ "$1" = "--help" ]; then
+if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
     echo "Wyświetlanie daty -> skrypt.sh --date"
 	echo "Tworzenie 100 plikow logs -> skrypt.sh --logs"
 	echo "Tworzenie n-plikow logs -> skrypt.sh --logs n, gdzie n - liczba plikow do stworzenia"
