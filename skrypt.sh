@@ -18,9 +18,9 @@ if [ "$1" = "--logs" ] || [ "$1" = "-l" ]; then
 fi
 
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
-    echo "Wyświetlanie daty -> skrypt.sh --date"
-	echo "Tworzenie 100 plikow logs -> skrypt.sh --logs"
-	echo "Tworzenie n-plikow logs -> skrypt.sh --logs n, gdzie n - liczba plikow do stworzenia"
+    echo "Wyświetlanie daty -> skrypt.sh --date lub -d"
+	echo "Tworzenie 100 plikow logs -> skrypt.sh --logs lub -l"
+	echo "Tworzenie n-plikow logs -> skrypt.sh --logs lub -l n, gdzie n - liczba plikow do stworzenia"
 fi
 
 read -p "end"
